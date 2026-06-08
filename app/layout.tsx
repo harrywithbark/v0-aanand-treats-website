@@ -23,12 +23,28 @@ export const metadata: Metadata = {
   description:
     'Aanand Treats by Sadhna is an exclusive 100% eggless boutique cake studio in Surrey, BC. Bespoke celebration cakes — handcrafted, perfectly balanced, and not too sweet.',
   generator: 'v0.app',
+  metadataBase: new URL('https://aanandtreats.ca'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes',
     description:
       'Bespoke celebration cakes — handcrafted, 100% eggless, and perfectly balanced. A private custom studio in Surrey, BC.',
     locale: 'en_CA',
     type: 'website',
+    siteName: 'Aanand Treats by Sadhna',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes',
+    description:
+      'Bespoke celebration cakes — handcrafted, 100% eggless, and perfectly balanced. Surrey, BC.',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: '#faf8f5',
   },
 }
 
@@ -61,6 +77,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        {/* Skip to main content — accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-espresso focus:px-5 focus:py-2.5 focus:text-sm focus:font-medium focus:text-cream focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(bakerySchema) }}

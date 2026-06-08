@@ -1,6 +1,7 @@
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
 import { VisualAtelier } from '@/components/visual-atelier'
+import { EventTypesSection } from '@/components/event-types-section'
 import { IntakePanel } from '@/components/intake-panel'
 import { SiteFooter } from '@/components/site-footer'
 import { ScrollReveal } from '@/components/scroll-reveal'
@@ -10,11 +11,15 @@ export default function Page() {
     <div id="top" className="min-h-screen bg-cream">
       <SiteHeader />
 
-      <main className="mx-auto max-w-[1440px]">
+      <main id="main-content" className="mx-auto max-w-[1440px]">
         <Hero />
 
         <ScrollReveal>
           <VisualAtelier />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <EventTypesSection />
         </ScrollReveal>
 
         <ScrollReveal>

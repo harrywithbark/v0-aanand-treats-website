@@ -7,6 +7,7 @@ import { STUDIO, whatsappLink } from '@/lib/studio'
 const NAV = [
   { label: 'The Atelier', href: '#atelier' },
   { label: 'Our Story', href: '#story' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Custom Intake', href: '#intake' },
 ]
 
