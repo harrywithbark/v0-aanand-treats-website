@@ -57,7 +57,6 @@ function MarqueeRow({
   items: Cake[]
   direction: 'ltr' | 'rtl'
 }) {
-  // Duplicate the set so the loop is seamless; mark the clone aria-hidden.
   return (
     <div className="marquee-row group overflow-hidden py-2" tabIndex={0}>
       <div
@@ -72,7 +71,7 @@ function MarqueeRow({
               aria-hidden={isClone || undefined}
               className="group/card relative w-[220px] shrink-0 lg:w-[300px]"
             >
-              <div className="relative h-[280px] w-[220px] overflow-hidden rounded-2xl border border-espresso/10 shadow-[0_14px_30px_-18px_rgba(43,36,33,0.5)] transition-transform duration-300 group-hover/card:scale-[1.02] lg:h-[340px] lg:w-[300px]">
+              <div className="relative h-[280px] w-[220px] overflow-hidden rounded-2xl border border-white/20 shadow-card transition-all duration-300 group-hover/card:scale-[1.03] group-hover/card:shadow-card-hover lg:h-[340px] lg:w-[300px]">
                 <Image
                   src={`/placeholder.svg?height=340&width=300&query=${encodeURIComponent(
                     cake.label + ' eggless cake',
@@ -83,7 +82,7 @@ function MarqueeRow({
                   sizes="300px"
                   className="object-cover"
                 />
-                <figcaption className="absolute bottom-3 left-3 rounded-full bg-cream/90 px-3 py-1 text-xs font-medium text-espresso backdrop-blur-sm">
+                <figcaption className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-espresso shadow-card backdrop-blur-sm">
                   {cake.label}
                 </figcaption>
               </div>
@@ -99,13 +98,13 @@ export function VisualAtelier() {
   return (
     <section id="atelier" className="py-16 lg:py-24">
       <header className="mb-10 px-5 text-center md:px-8">
-        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-espresso/50">
+        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
           THE PORTFOLIO
         </p>
         <h2 className="font-serif text-4xl text-espresso md:text-5xl text-balance">
-          The Visual Atelier
+          The Visual <span className="gradient-text-coral">Atelier</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-md text-pretty text-sm leading-relaxed text-espresso/65">
+        <p className="mx-auto mt-4 max-w-md text-pretty text-sm leading-relaxed text-espresso/75">
           A continuous showcase of recent commissions — from intimate Bento bakes
           to multi-tier showstoppers.
         </p>
@@ -121,9 +120,9 @@ export function VisualAtelier() {
           href={STUDIO.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-[48px] items-center gap-3 rounded-full border border-espresso/15 bg-card px-6 py-3 text-sm font-medium text-espresso transition-all duration-300 hover:scale-[1.02] hover:border-rose hover:text-rose"
+          className="inline-flex min-h-[48px] items-center gap-3 rounded-full glass border border-white/40 px-6 py-3 text-sm font-medium text-espresso shadow-card transition-all duration-300 hover:scale-[1.03] hover:shadow-card-hover hover:-translate-y-0.5 hover:border-rose/30"
         >
-          <Camera className="size-5" aria-hidden="true" />
+          <Camera className="size-5 text-rose" aria-hidden="true" />
           Follow {STUDIO.instagramHandle} for Daily Studio Captures
         </a>
       </div>

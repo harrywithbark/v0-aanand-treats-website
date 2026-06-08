@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-gradient-to-b from-background to-cream">
       <SiteHeader />
 
       <main className="mx-auto max-w-[1440px] pt-[72px]">
         {/* Sub-hero */}
         <section
           aria-labelledby="gallery-heading"
-          className="border-b border-espresso/10 px-5 py-14 text-center md:px-8 lg:py-20"
+          className="border-b border-white/10 px-5 py-14 text-center md:px-8 lg:py-20"
         >
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-8 flex justify-center">
@@ -44,7 +44,7 @@ export default function GalleryPage() {
             </ol>
           </nav>
 
-          <p className="mb-3 text-xs font-medium tracking-[0.2em] text-espresso/55">
+          <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
             THE ATELIER PORTFOLIO
           </p>
           <h1
@@ -52,16 +52,16 @@ export default function GalleryPage() {
             className="font-serif text-4xl leading-tight text-espresso text-balance md:text-5xl lg:text-6xl"
           >
             Crafted with Intention,{' '}
-            <span className="italic text-rose">Remembered Forever.</span>
+            <span className="italic gradient-text-coral">Remembered Forever.</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-espresso/65">
+          <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-espresso/75">
             A curated collection of bespoke, 100% eggless cakes — each one
             built around a story, an occasion, and an individual vision.
           </p>
 
           <Link
             href="/"
-            className="mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-espresso/20 px-5 py-2 text-sm font-medium text-espresso/70 transition-all duration-200 hover:border-espresso/40 hover:text-espresso"
+            className="mt-8 inline-flex min-h-[44px] items-center gap-2 rounded-full glass border border-white/20 px-5 py-2 text-sm font-medium text-espresso/70 transition-all duration-200 hover:border-rose/60 hover:text-rose hover:shadow-glow"
           >
             <ArrowLeft className="size-4" aria-hidden="true" />
             Back to Home

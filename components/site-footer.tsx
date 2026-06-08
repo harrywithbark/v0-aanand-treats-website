@@ -3,18 +3,18 @@ import { STUDIO } from '@/lib/studio'
 
 export function SiteFooter() {
   return (
-    <footer className="bg-espresso text-cream">
+    <footer className="bg-deep-dark text-cream">
       <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-8 lg:grid-cols-3 lg:gap-12 lg:py-20">
         {/* Column 1: privacy card */}
-        <div className="rounded-2xl border border-cream/20 p-6">
+        <div className="rounded-2xl border border-white/10 glass-subtle p-6">
           <div className="mb-3 flex items-center gap-2">
-            <MapPin className="size-4 text-gold" aria-hidden="true" />
+            <MapPin className="size-4 text-amber-vivid" aria-hidden="true" />
             <h2 className="font-serif text-xl text-cream">
               Private Atelier Collection
             </h2>
           </div>
           <p className="mb-4 text-sm font-medium tracking-wide text-rose">
-            Whalley Area • Surrey, BC
+            <span className="gradient-text-coral">Whalley Area</span> • Surrey, BC
           </p>
           <p className="text-sm leading-relaxed text-cream/70">
             Aanand Treats operates as a private, residential custom studio. To
@@ -28,7 +28,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-5">
           <div>
             <div className="mb-3 flex items-center gap-2">
-              <Clock className="size-4 text-gold" aria-hidden="true" />
+              <Clock className="size-4 text-amber-vivid" aria-hidden="true" />
               <h2 className="font-serif text-xl text-cream">Studio Hours</h2>
             </div>
             <p className="text-sm leading-relaxed text-cream/70">
@@ -37,7 +37,7 @@ export function SiteFooter() {
               Sunday: Studio Closed
             </p>
           </div>
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/50 bg-gold/10 px-4 py-2 text-sm font-medium text-gold">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-vivid/30 bg-amber-vivid/10 px-4 py-2 text-sm font-medium text-amber-vivid shadow-glow-amber">
             <Sparkles className="size-4" aria-hidden="true" />
             Current Lead Time: Custom bookings require 2–3 weeks advance notice
           </div>
@@ -48,14 +48,14 @@ export function SiteFooter() {
           <h2 className="font-serif text-xl text-cream">Direct Studio Line</h2>
           <a
             href={`tel:+${STUDIO.phoneRaw}`}
-            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-cream/20 px-4 py-3 text-sm font-medium text-cream transition-colors hover:border-gold hover:text-gold"
+            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-cream/90 transition-all hover:border-amber-vivid/50 hover:text-amber-vivid hover:shadow-glow-amber"
           >
             <Phone className="size-4" aria-hidden="true" />
             Dial Studio Line: {STUDIO.phoneDisplay}
           </a>
           <a
             href={`mailto:${STUDIO.email}`}
-            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-cream/20 px-4 py-3 text-sm font-medium text-cream transition-colors hover:border-gold hover:text-gold"
+            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/10 px-4 py-3 text-sm font-medium text-cream/90 transition-all hover:border-amber-vivid/50 hover:text-amber-vivid hover:shadow-glow-amber"
           >
             <Mail className="size-4" aria-hidden="true" />
             {STUDIO.email}

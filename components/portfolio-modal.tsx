@@ -42,20 +42,20 @@ export function PortfolioModal({
     >
       {/* Scrim */}
       <div
-        className="absolute inset-0 bg-espresso/70 backdrop-blur-sm"
+        className="absolute inset-0 bg-espresso/70 backdrop-blur-xl scrim-animate"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Panel */}
-      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-3xl bg-cream shadow-2xl">
+      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-3xl glass-panel shadow-deep modal-animate">
         {/* Close */}
         <button
           ref={closeRef}
           type="button"
           aria-label="Close portfolio detail"
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex size-10 items-center justify-center rounded-full bg-espresso/80 text-cream backdrop-blur-sm transition-colors hover:bg-espresso"
+          className="absolute right-4 top-4 z-10 flex size-10 items-center justify-center rounded-full bg-espresso/80 text-white backdrop-blur-sm transition-all duration-300 hover:bg-rose hover:shadow-glow"
         >
           <X className="size-5" aria-hidden="true" />
         </button>
@@ -71,7 +71,7 @@ export function PortfolioModal({
             className="object-cover"
             sizes="(max-width: 672px) 100vw, 672px"
           />
-          <span className="absolute left-4 bottom-4 rounded-full bg-espresso/80 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.15em] text-cream backdrop-blur-sm">
+          <span className="absolute left-4 bottom-4 rounded-full bg-rose/90 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.15em] text-white shadow-glow backdrop-blur-sm">
             {item.occasionLabel.toUpperCase()}
           </span>
         </div>
@@ -94,7 +94,7 @@ export function PortfolioModal({
             href={portfolioWhatsapp(item.occasionLabel, item.title)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-7 py-3 text-sm font-semibold text-espresso transition-all duration-300 hover:scale-[1.02] hover:brightness-105"
+            className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-amber-vivid px-7 py-3 text-sm font-semibold text-white shadow-amber transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-amber hover:brightness-110"
             aria-label={`Inquire about the ${item.title} style via WhatsApp`}
           >
             <MessageCircle className="size-4" aria-hidden="true" />

@@ -11,7 +11,7 @@ export function EventTypesSection() {
       className="px-5 py-16 md:px-8 lg:py-24"
     >
       <div className="mb-10 text-center lg:mb-14">
-        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-espresso/55">
+        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
           CRAFTED FOR EVERY OCCASION
         </p>
         <h2
@@ -19,9 +19,9 @@ export function EventTypesSection() {
           className="font-serif text-4xl leading-tight text-espresso text-balance md:text-5xl"
         >
           What Occasion Calls for a{' '}
-          <span className="italic text-rose">Masterpiece?</span>
+          <span className="italic gradient-text-coral">Masterpiece?</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-espresso/65">
+        <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-espresso/75">
           Every event is unique. Every cake is built around it — 100% eggless,
           entirely handcrafted, and completely your own.
         </p>
@@ -31,7 +31,7 @@ export function EventTypesSection() {
         {EVENT_TYPES.map((event, i) => (
           <ScrollReveal key={event.id} delay={i * 60}>
             <article
-              className="group flex flex-col overflow-hidden rounded-2xl border border-espresso/10 bg-cream shadow-[0_8px_30px_-16px_rgba(43,36,33,0.25)] transition-all duration-300 hover:shadow-[0_16px_40px_-16px_rgba(43,36,33,0.35)] hover:-translate-y-0.5"
+              className="group flex flex-col overflow-hidden rounded-2xl glass-card border border-white/20 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-rose/20"
             >
               {/* Placeholder image */}
               <div className="relative h-[220px] w-full shrink-0 overflow-hidden bg-secondary">
@@ -41,11 +41,11 @@ export function EventTypesSection() {
                   )}`}
                   alt={`Placeholder for ${event.title} custom eggless cake by Aanand Treats`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Occasion pill */}
-                <span className="absolute left-3 top-3 rounded-full bg-espresso/80 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.15em] text-cream backdrop-blur-sm">
+                <span className="absolute left-3 top-3 rounded-full bg-rose/90 px-3 py-1 text-[0.65rem] font-semibold tracking-[0.15em] text-white shadow-glow backdrop-blur-sm">
                   {event.title.toUpperCase()}
                 </span>
               </div>
@@ -56,14 +56,14 @@ export function EventTypesSection() {
                   {event.tagline.toUpperCase()}
                 </p>
                 <h3 className="font-serif text-xl text-espresso">{event.title}</h3>
-                <p className="flex-1 text-sm leading-relaxed text-espresso/65 text-pretty">
+                <p className="flex-1 text-sm leading-relaxed text-espresso/70 text-pretty">
                   {event.copy}
                 </p>
                 <a
                   href={eventTypeWhatsapp(event.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex min-h-[48px] w-fit items-center gap-2 rounded-full border border-gold px-5 py-2.5 text-sm font-medium text-espresso transition-all duration-300 hover:scale-[1.02] hover:bg-gold/10"
+                  className="mt-2 inline-flex min-h-[48px] w-fit items-center gap-2 rounded-full bg-rose/10 border border-rose/20 px-5 py-2.5 text-sm font-medium text-rose transition-all duration-300 hover:scale-[1.02] hover:bg-rose hover:text-white hover:shadow-glow"
                   aria-label={`Inquire about a ${event.title} cake via WhatsApp`}
                 >
                   <MessageCircle className="size-4" aria-hidden="true" />

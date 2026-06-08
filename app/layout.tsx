@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Inter, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#fff8f0',
+}
 
 export const metadata: Metadata = {
   title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes • Surrey, BC',
@@ -40,11 +46,6 @@ export const metadata: Metadata = {
     title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes',
     description:
       'Bespoke celebration cakes — handcrafted, 100% eggless, and perfectly balanced. Surrey, BC.',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    themeColor: '#faf8f5',
   },
 }
 

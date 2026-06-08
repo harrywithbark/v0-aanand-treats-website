@@ -32,10 +32,10 @@ export function GalleryClient() {
               type="button"
               aria-pressed={isActive}
               onClick={() => setActiveFilter(f.id)}
-              className={`min-h-[44px] rounded-full border px-5 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/60 ${
+              className={`min-h-[44px] rounded-full border px-5 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/60 ${
                 isActive
-                  ? 'border-gold bg-gold text-espresso'
-                  : 'border-espresso/20 bg-cream text-espresso/70 hover:border-gold/60 hover:text-espresso'
+                  ? 'border-rose bg-rose text-white shadow-glow'
+                  : 'border-white/20 glass text-espresso/70 hover:border-rose/60 hover:text-rose hover:shadow-glow'
               }`}
             >
               {f.label}
@@ -55,7 +55,7 @@ export function GalleryClient() {
           <ScrollReveal key={item.id} delay={i * 50}>
             <article
               role="listitem"
-              className="group cursor-pointer overflow-hidden rounded-2xl border border-espresso/10 bg-cream shadow-[0_8px_30px_-16px_rgba(43,36,33,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-16px_rgba(43,36,33,0.35)]"
+              className="group cursor-pointer overflow-hidden rounded-2xl glass-card border border-white/20 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover hover:border-rose/20"
               onClick={() => setSelected(item)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
