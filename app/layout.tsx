@@ -1,35 +1,53 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Playfair_Display, Inter, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
+  subsets: ['latin'],
+  display: 'swap',
+})
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
+})
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes • Surrey, BC',
+  description:
+    'Aanand Treats by Sadhna is an exclusive 100% eggless boutique cake studio in Surrey, BC. Bespoke celebration cakes — handcrafted, perfectly balanced, and not too sweet.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  openGraph: {
+    title: 'Aanand Treats by Sadhna | 100% Eggless Custom Cakes',
+    description:
+      'Bespoke celebration cakes — handcrafted, 100% eggless, and perfectly balanced. A private custom studio in Surrey, BC.',
+    locale: 'en_CA',
+    type: 'website',
   },
+}
+
+const bakerySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Bakery',
+  name: 'Aanand Treats by Sadhna',
+  description: '100% Eggless Custom Cakes',
+  servesCuisine: '100% Eggless Custom Cakes',
+  priceRange: '$$$',
+  telephone: '+1 (672) 200-6999',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Surrey, BC',
+    addressRegion: 'BC',
+    addressCountry: 'CA',
+  },
+  areaServed: 'Metro Vancouver, BC',
+  openingHours: 'Mo-Sa 10:00-18:00',
 }
 
 export default function RootLayout({
@@ -38,8 +56,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${playfair.variable} ${inter.variable} ${geistMono.variable} bg-background`}
+    >
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(bakerySchema) }}
+        />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
