@@ -2,26 +2,31 @@ import Image from 'next/image'
 import { Camera } from 'lucide-react'
 import { STUDIO } from '@/lib/studio'
 
-type Cake = { alt: string; label: string }
+type Cake = { src: string; alt: string; label: string }
 
 const ROW_ONE: Cake[] = [
   {
+    src: '/images/atelier-pastel-bento.png',
     alt: 'Minimalist pastel pink Bento cake with delicate hand-lettered script and a single buttercream rosette by Aanand Treats',
     label: 'Pastel Bento',
   },
   {
+    src: '/images/atelier-biscoff-bento.png',
     alt: 'Trending Biscoff Bento cake with caramelised cookie crumb layering and a glossy spiced drip by Aanand Treats',
     label: 'Biscoff Bento',
   },
   {
+    src: '/images/atelier-cupcakes.png',
     alt: 'Row of softly piped buttercream cupcakes in cream and rose tones with sugared petal accents by Aanand Treats',
     label: 'Signature Cupcakes',
   },
   {
+    src: '/images/atelier-chocolate-hamper.png',
     alt: 'Luxury eggless chocolate gift hamper arranged with satin ribbon and gold foil detailing by Aanand Treats',
     label: 'Chocolate Hamper',
   },
   {
+    src: '/images/atelier-modern-minimal.png',
     alt: 'Modern sage green celebration cake finished with hand-applied gold leaf and a smooth sculpted edge by Aanand Treats',
     label: 'Modern Minimal',
   },
@@ -29,22 +34,27 @@ const ROW_ONE: Cake[] = [
 
 const ROW_TWO: Cake[] = [
   {
+    src: '/images/atelier-wedding.png',
     alt: 'Intricate three-tier white wedding cake silhouette dressed with cascading sugar florals by Aanand Treats',
     label: 'Wedding Silhouette',
   },
   {
+    src: '/images/atelier-graduation.png',
     alt: 'Floral buttercream graduation cake with elegant script work and a cap detail by Aanand Treats',
     label: 'Graduation',
   },
   {
+    src: '/images/atelier-baby-shower.png',
     alt: 'Textured pastel baby shower cake with vibrant piped florals and soft ruffle detailing by Aanand Treats',
     label: 'Baby Shower',
   },
   {
+    src: '/images/atelier-anniversary.png',
     alt: 'Elegant two-tier anniversary cake with gilded gold accents and a fine pearl border by Aanand Treats',
     label: 'Anniversary',
   },
   {
+    src: '/images/atelier-showstopper.png',
     alt: 'Tall buttercream celebration cake adorned with fresh seasonal flowers and a smooth ivory finish by Aanand Treats',
     label: 'Showstopper',
   },
@@ -73,9 +83,7 @@ function MarqueeRow({
             >
               <div className="relative h-[280px] w-[220px] overflow-hidden rounded-2xl border border-white/20 shadow-card transition-all duration-300 group-hover/card:scale-[1.03] group-hover/card:shadow-card-hover lg:h-[340px] lg:w-[300px]">
                 <Image
-                  src={`/placeholder.svg?height=340&width=300&query=${encodeURIComponent(
-                    cake.label + ' eggless cake',
-                  )}`}
+                  src={cake.src}
                   alt={isClone ? '' : cake.alt}
                   fill
                   loading="eager"

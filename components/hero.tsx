@@ -117,7 +117,7 @@ export function Hero() {
       <ScrollReveal delay={180} className="relative">
         <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-rose/30 shadow-hero bg-gradient-to-br from-rose/8 to-cream transition-all duration-500 hover:border-rose/50 hover:shadow-[0_40px_80px_-30px_rgba(26,26,46,0.45),0_0_30px_rgba(255,107,107,0.12)]">
           <Image
-            src="/placeholder.svg?height=900&width=675"
+            src="/images/hero-cake.png"
             alt="Signature multi-tier eggless celebration cake finished with delicate hand-piped buttercream florals and gold-leaf accents by Aanand Treats"
             fill
             priority
