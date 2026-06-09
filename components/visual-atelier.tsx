@@ -96,7 +96,10 @@ function MarqueeRow({
 
 export function VisualAtelier() {
   return (
-    <section id="atelier" className="py-16 lg:py-24">
+    <section id="atelier" className="relative py-16 lg:py-24">
+      {/* Decorative accent 5 */}
+      <div className="absolute -left-32 top-1/3 size-48 rounded-full bg-rose/10 blur-3xl pointer-events-none" aria-hidden="true" />
+      
       <header className="mb-10 px-5 text-center md:px-8">
         <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
           THE PORTFOLIO
@@ -108,6 +111,8 @@ export function VisualAtelier() {
           A continuous showcase of recent commissions — from intimate Bento bakes
           to multi-tier showstoppers.
         </p>
+        {/* Decorative accent 6 */}
+        <div className="inline-block mt-6 w-12 h-1 bg-gradient-to-r from-rose via-amber-vivid to-emerald-vivid rounded-full opacity-50" aria-hidden="true" />
       </header>
 
       <div className="flex flex-col gap-5">

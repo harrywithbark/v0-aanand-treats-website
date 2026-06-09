@@ -17,18 +17,12 @@ export function Hero() {
           className="font-serif font-medium leading-[1.05] text-espresso text-balance"
           style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
         >
-          Bespoke Celebration Cakes. Handcrafted,{' '}
-          <span className="italic gradient-text-emerald">100% Eggless</span>, and Perfectly
-          Balanced.
+          <span className="gradient-text-coral">Custom Cakes</span>. Handcrafted,{' '}
+          <span className="italic text-rose">100% Eggless</span>, Perfectly Balanced.
         </h1>
 
-        <p className="max-w-xl text-pretty leading-relaxed text-espresso/80">
-          What began as a 22-year-old founder&apos;s journey from India to Canada
-          is today a private atelier devoted to one belief: that a custom
-          masterpiece should be elegant, deeply personal, and{' '}
-          <span className="font-medium text-espresso">not too sweet — just right.</span>{' '}
-          Every tier, every flower, and every flavour is composed by hand for your
-          celebration.
+        <p className="max-w-xl text-pretty leading-relaxed text-espresso/75">
+          From India to Canada, Sadhna&apos;s private atelier crafts bespoke masterpieces—elegant, deeply personal, and never too sweet. Every detail, by hand, for your celebration.
         </p>
 
         <div className="mt-2 flex flex-wrap items-center gap-4">
@@ -45,11 +39,16 @@ export function Hero() {
             View the Atelier
           </a>
         </div>
+
+        {/* Decorative accent 1 */}
+        <div className="absolute -left-8 top-1/4 size-2 rounded-full bg-rose/30" aria-hidden="true" />
+        {/* Decorative accent 2 */}
+        <div className="absolute -left-4 bottom-1/3 size-1.5 rounded-full bg-amber-vivid/40" aria-hidden="true" />
       </div>
 
       {/* Right: editorial frame */}
       <div className="relative">
-        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-white/20 shadow-hero">
+        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-rose/30 shadow-hero bg-gradient-to-br from-rose/5 to-cream">
           <Image
             src="/placeholder.svg?height=900&width=675"
             alt="Signature multi-tier eggless celebration cake finished with delicate hand-piped buttercream florals and gold-leaf accents by Aanand Treats"
@@ -59,10 +58,14 @@ export function Hero() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-espresso/20 via-transparent to-transparent" />
+          {/* Decorative corner accent */}
+          <div className="absolute -right-3 -top-3 size-12 rounded-full bg-amber-vivid/20 blur-xl" aria-hidden="true" />
         </div>
-        <span className="absolute -bottom-4 left-6 rounded-full bg-amber-vivid px-5 py-2 text-xs font-semibold tracking-wide text-white shadow-badge">
+        <span className="absolute -bottom-4 left-6 rounded-full bg-gradient-to-r from-rose to-amber-vivid px-5 py-2 text-xs font-semibold tracking-wide text-white shadow-badge">
           Signature Creation
         </span>
+        {/* Decorative accent 3 */}
+        <div className="absolute -bottom-6 right-8 size-2 rounded-full bg-emerald-vivid/50" aria-hidden="true" />
       </div>
     </section>
   )

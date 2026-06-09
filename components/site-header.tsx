@@ -23,7 +23,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 border-b border-white/10 bg-white/60 px-5 py-3 backdrop-blur-xl md:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 border-b border-rose/20 bg-gradient-to-r from-rose/10 via-amber-vivid/5 to-cream px-5 py-3 backdrop-blur-xl md:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
         {/* Left: status token */}
         <span className="hidden shrink-0 text-[0.65rem] font-medium tracking-[0.18em] text-espresso/80 lg:block">
           <span className="inline-block size-1.5 rounded-full bg-sage mr-1.5" aria-hidden="true" />

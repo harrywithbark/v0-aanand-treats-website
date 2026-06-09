@@ -8,8 +8,11 @@ export function EventTypesSection() {
     <section
       id="event-types"
       aria-labelledby="event-types-heading"
-      className="px-5 py-16 md:px-8 lg:py-24"
+      className="relative px-5 py-16 md:px-8 lg:py-24"
     >
+      {/* Decorative accent 7 */}
+      <div className="absolute -right-40 top-1/2 size-56 rounded-full bg-amber-vivid/8 blur-3xl pointer-events-none" aria-hidden="true" />
+      
       <div className="mb-10 text-center lg:mb-14">
         <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
           CRAFTED FOR EVERY OCCASION
@@ -31,8 +34,11 @@ export function EventTypesSection() {
         {EVENT_TYPES.map((event, i) => (
           <ScrollReveal key={event.id} delay={i * 60}>
             <article
-              className="group flex flex-col overflow-hidden rounded-2xl glass-card border border-white/20 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-rose/20"
+              className="group relative flex flex-col overflow-hidden rounded-2xl glass-card border border-white/20 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-rose/20"
             >
+              {/* Decorative corner accent on card */}
+              <div className="absolute -right-4 -top-4 size-16 rounded-full bg-emerald-vivid/10 blur-xl pointer-events-none group-hover:bg-rose/10 transition-colors" aria-hidden="true" />
+              
               {/* Placeholder image */}
               <div className="relative h-[220px] w-full shrink-0 overflow-hidden bg-secondary">
                 <Image
