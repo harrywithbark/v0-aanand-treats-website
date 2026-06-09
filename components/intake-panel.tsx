@@ -30,13 +30,13 @@ export function IntakePanel() {
       {/* Decorative accent 9 */}
       <div className="absolute -right-20 top-1/3 size-40 rounded-full bg-rose/10 blur-3xl pointer-events-none" aria-hidden="true" />
       
-      <div className="relative overflow-hidden rounded-2xl border border-rose/25 bg-gradient-to-br from-rose/25 via-amber-vivid/15 to-emerald-vivid/10 p-5 shadow-deep backdrop-blur-sm sm:rounded-[2rem] sm:p-8 md:p-12">
+      <div className="relative overflow-hidden rounded-2xl border border-rose/25 bg-gradient-to-br from-rose/25 via-amber-vivid/15 to-emerald-vivid/10 p-4 shadow-deep backdrop-blur-sm sm:p-5 sm:rounded-[2rem] md:p-8 lg:p-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 pointer-events-none opacity-30" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,107,107,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px'}} aria-hidden="true" />
         
-        <div className="relative grid gap-8 lg:grid-cols-2 lg:gap-14">
+        <div className="relative grid w-full gap-6 sm:gap-8 md:gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left: messaging lane */}
-          <div className="flex flex-col justify-center">
+          <div className="flex min-w-0 flex-col justify-center">
             <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
               CUSTOM CAKE BUILDER
             </p>
@@ -60,7 +60,7 @@ export function IntakePanel() {
           </div>
 
           {/* Right: quick-spec grid */}
-          <div className="relative rounded-2xl border border-rose/30 backdrop-blur-lg bg-white/20 p-5 shadow-lg sm:p-6 md:p-8">
+          <div className="relative min-w-0 rounded-2xl border border-rose/30 backdrop-blur-lg bg-white/20 p-4 shadow-lg sm:p-5 md:p-6 lg:p-8">
             {/* Embellishment 5: watermark cake silhouette in form card corner */}
             <div className="pointer-events-none absolute bottom-4 right-4 select-none opacity-[0.07]" aria-hidden="true">
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
