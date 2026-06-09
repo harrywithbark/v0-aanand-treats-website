@@ -3,7 +3,7 @@ import { STUDIO } from '@/lib/studio'
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-espresso via-warm-dark to-deep-dark text-cream">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-espresso via-espresso to-deep-dark text-cream">
       {/* Tinted glassmorphism background layer */}
       <div className="absolute inset-0 backdrop-blur-xl bg-gradient-to-br from-rose/10 via-amber-vivid/5 to-sage/5 pointer-events-none" aria-hidden="true" />
       
@@ -58,7 +58,7 @@ export function SiteFooter() {
               Sunday: Studio Closed
             </p>
           </div>
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-vivid/40 backdrop-blur-lg bg-amber-vivid/15 px-4 py-2 text-sm font-medium text-amber-vivid shadow-glow-amber">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-vivid/40 backdrop-blur-lg bg-amber-vivid/15 px-4 py-2 text-sm font-medium text-amber-vivid shadow-sm">
             <Sparkles className="size-4" aria-hidden="true" />
             Current Lead Time: 2–3 weeks
           </div>
@@ -69,14 +69,14 @@ export function SiteFooter() {
           <h2 className="font-serif text-xl text-cream">Direct Studio Line</h2>
           <a
             href={`tel:+${STUDIO.phoneRaw}`}
-            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 backdrop-blur-lg bg-white/10 hover:bg-rose/20 px-4 py-3 text-sm font-medium text-cream/90 hover:text-amber-vivid transition-all hover:shadow-glow-amber"
+            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 backdrop-blur-lg bg-white/10 hover:bg-rose/20 px-4 py-3 text-sm font-medium text-cream/90 hover:text-amber-vivid transition-all hover:shadow-sm"
           >
             <Phone className="size-4" aria-hidden="true" />
             Dial: {STUDIO.phoneDisplay}
           </a>
           <a
             href={`mailto:${STUDIO.email}`}
-            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 backdrop-blur-lg bg-white/10 hover:bg-rose/20 px-4 py-3 text-sm font-medium text-cream/90 hover:text-amber-vivid transition-all hover:shadow-glow-amber"
+            className="inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 backdrop-blur-lg bg-white/10 hover:bg-rose/20 px-4 py-3 text-sm font-medium text-cream/90 hover:text-amber-vivid transition-all hover:shadow-sm"
           >
             <Mail className="size-4" aria-hidden="true" />
             {STUDIO.email}
