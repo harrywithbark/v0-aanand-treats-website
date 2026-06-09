@@ -29,7 +29,8 @@ export function Hero() {
   return (
     <section
       id="story"
-      className="relative grid items-center gap-10 px-5 pb-16 pt-32 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
+      role="banner"
+      className="relative grid items-center gap-8 px-4 pb-12 pt-24 md:px-6 md:pb-16 md:pt-32 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
     >
       <div className="pointer-events-none absolute right-0 top-28 hidden select-none opacity-25 lg:block" aria-hidden="true">
         <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
@@ -61,7 +62,7 @@ export function Hero() {
           </svg>
         </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-4">
+        <div className="mt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
           <a href="#intake" className="inline<think> min-h-[48px] items-center justify-center rounded-full bg-rose px-7 py-3 text-sm font-medium text-cream shadow-glow transition-all duration-300 hover:scale-[1.03] hover:brightness-110">Build Your Cake</a>
           <a href="#atelier" className="inline<think> min-h-[48px] items-center justify-center rounded-full glass border border-cream/40 px-7 py-3 text-sm font-medium text-espresso shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:-translate-y-0.5">View the Atelier</a>
         </div>
