@@ -30,7 +30,7 @@ export function IntakePanel() {
       {/* Decorative accent 9 */}
       <div className="absolute -right-20 top-1/3 size-40 rounded-full bg-rose/10 blur-3xl pointer-events-none" aria-hidden="true" />
       
-      <div className="relative overflow-hidden rounded-[2rem] border border-rose/25 bg-gradient-to-br from-rose/25 via-amber-vivid/15 to-emerald-vivid/10 p-8 shadow-lg backdrop-blur-sm md:p-12">
+      <div className="relative overflow-hidden rounded-[2rem] border border-rose/25 bg-gradient-to-br from-rose/25 via-amber-vivid/15 to-emerald-vivid/10 p-8 shadow-deep backdrop-blur-sm md:p-12">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 pointer-events-none opacity-30" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,107,107,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px'}} aria-hidden="true" />
         
@@ -50,7 +50,7 @@ export function IntakePanel() {
               href={whatsappLink('Hi Sadhna! I have a quick question about a custom eggless cake.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-7 inline-flex min-h-[48px] w-fit items-center gap-2 rounded-full bg-rose px-7 py-3 text-sm font-medium text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:brightness-110"
+              className="mt-7 inline-flex min-h-[48px] w-fit items-center gap-2 rounded-full bg-rose px-7 py-3 text-sm font-medium text-white shadow-glow transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-lg hover:brightness-110"
             >
               <MessageCircle className="size-4" aria-hidden="true" />
               Chat directly with Sadhna
@@ -82,7 +82,7 @@ export function IntakePanel() {
                   id="occasion"
                   value={occasion}
                   onChange={(e) => setOccasion(e.target.value)}
-                  className="min-h-[48px] rounded-xl border border-white/40 bg-white/50 px-4 text-sm text-espresso outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/30 shadow-sm"
+                  className="min-h-[48px] rounded-xl border border-white/40 bg-white/50 px-4 text-sm text-espresso outline-none transition-all focus:border-rose focus:ring-2 focus:ring-rose/30 shadow-inner-soft"
                 >
                   {OCCASIONS.map((o) => (
                     <option key={o} value={o}>
@@ -133,7 +133,7 @@ export function IntakePanel() {
               <button
                 type="button"
                 onClick={sendBlueprint}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-vivid to-rose px-7 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:brightness-110"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-vivid to-rose px-7 py-3 text-sm font-semibold text-white shadow-amber transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-amber hover:brightness-110"
               >
                 <Send className="size-4" aria-hidden="true" />
                 Send Blueprint to WhatsApp

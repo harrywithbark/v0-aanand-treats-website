@@ -18,10 +18,10 @@ const buttonVariants = cva(
         destructive:
           'bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40',
         link: 'text-primary underline-offset-4 hover:underline',
-        gradient: 'bg-gradient-to-r from-rose to-amber-vivid text-primary-foreground shadow-md hover:shadow-lg hover:brightness-110 active:scale-[0.97]',
-        'gradient-emerald': 'bg-gradient-to-r from-sage to-sage text-primary-foreground shadow-md hover:shadow-lg hover:brightness-110 active:scale-[0.97]',
-        'gradient-coral': 'bg-gradient-to-r from-rose to-rose text-primary-foreground shadow-md hover:shadow-lg hover:brightness-110 active:scale-[0.97]',
-        glow: 'bg-rose text-primary-foreground shadow-glow hover:shadow-lg hover:brightness-110 active:scale-[0.97]',
+        gradient: 'bg-gradient-to-r from-rose to-amber-vivid text-primary-foreground shadow-amber hover:shadow-glow-amber hover:brightness-110 active:scale-[0.97]',
+        'gradient-emerald': 'bg-gradient-to-r from-sage to-emerald-vivid text-primary-foreground shadow-emerald hover:shadow-glow-emerald hover:brightness-110 active:scale-[0.97]',
+        'gradient-coral': 'bg-gradient-to-r from-rose to-coral text-primary-foreground shadow-coral hover:shadow-glow-coral hover:brightness-110 active:scale-[0.97]',
+        glow: 'bg-rose text-primary-foreground shadow-glow hover:shadow-glow-lg hover:brightness-110 active:scale-[0.97]',
         'glass-primary': 'glass border-white/30 text-foreground hover:glass-strong hover:-translate-y-0.5 active:scale-[0.97]',
       },
       size: {

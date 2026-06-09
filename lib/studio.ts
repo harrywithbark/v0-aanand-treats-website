@@ -24,6 +24,8 @@ export function portfolioWhatsapp(occasionLabel: string, title: string) {
   )
 }
 
+// ─── Event Types (main page section + gallery filter categories) ────────────
+
 export type EventType = {
   id: string
   title: string
@@ -70,6 +72,8 @@ export const EVENT_TYPES: EventType[] = [
   },
 ]
 
+// ─── Portfolio Items (gallery page) ─────────────────────────────────────────
+
 export type OccasionId =
   | 'wedding'
   | 'birthday'
@@ -85,7 +89,6 @@ export type PortfolioItem = {
   title: string
   description: string
   alt: string
-  src: string
 }
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
@@ -94,135 +97,108 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     occasion: 'wedding',
     occasionLabel: 'Wedding',
     title: 'Three-Tier Ivory Cascade',
-    description: 'A dramatic three-tier silhouette draped in cascading sugar florals and a hand-piped lace border — designed as the centrepiece for an intimate garden ceremony.',
+    description:
+      'A dramatic three-tier silhouette draped in cascading sugar florals and a hand-piped lace border — designed as the centrepiece for an intimate garden ceremony.',
     alt: 'Three-tier ivory wedding cake with cascading sugar florals and delicate lace piping by Aanand Treats',
-    src: '/images/wedding-silhouette.jpg',
   },
   {
     id: 'p2',
     occasion: 'birthday',
     occasionLabel: 'Birthday',
     title: 'Pastel Ombré Dream',
-    description: 'Soft lavender-to-cream ombré buttercream with a single statement bloom and hand-lettered gold script celebrating a memorable 30th birthday.',
+    description:
+      'Soft lavender-to-cream ombré buttercream with a single statement bloom and hand-lettered gold script celebrating a memorable 30th birthday.',
     alt: 'Pastel ombré birthday cake with gold hand-lettered script and a statement floral bloom by Aanand Treats',
-    src: '/images/birthday-pastel.jpg',
   },
   {
     id: 'p3',
     occasion: 'bento',
     occasionLabel: 'Bento Cake',
     title: 'Biscoff Crumb Bento',
-    description: 'A compact Bento with a caramelised Biscoff cookie crumb shell, spiced drip detail, and a miniature hand-crafted ribbon motif — rich in flavour, refined in finish.',
+    description:
+      'A compact Bento with a caramelised Biscoff cookie crumb shell, spiced drip detail, and a miniature hand-crafted fondant motif — rich in flavour, refined in finish.',
     alt: 'Biscoff bento cake with caramelised cookie crumb shell and spiced drip detail by Aanand Treats',
-    src: '/images/biscoff-bento.jpg',
   },
   {
     id: 'p4',
     occasion: 'anniversary',
     occasionLabel: 'Anniversary',
     title: 'Gold Leaf Elegance',
-    description: 'A two-tier ivory cake adorned with hand-applied gold leaf panels, pearl-border piping, and a bespoke monogram topper for a milestone silver anniversary.',
+    description:
+      'A two-tier ivory cake adorned with hand-applied gold leaf panels, pearl-border piping, and a bespoke monogram topper for a milestone silver anniversary.',
     alt: 'Two-tier ivory anniversary cake with hand-applied gold leaf panels and pearl border piping by Aanand Treats',
-    src: '/images/anniversary.jpg',
   },
   {
     id: 'p5',
     occasion: 'baby-shower',
     occasionLabel: 'Baby Shower',
     title: 'Blush Ruffle Garden',
-    description: 'Textured blush buttercream ruffles, hand-piped daisies, and a soft script banner — made for a sun-filled afternoon baby shower celebration.',
+    description:
+      'Textured blush buttercream ruffles, hand-piped daisies, and a soft script banner — made for a sun-filled afternoon baby shower celebration.',
     alt: 'Blush buttercream ruffle baby shower cake with hand-piped daisies and script banner by Aanand Treats',
-    src: '/images/baby-shower.jpg',
   },
   {
     id: 'p6',
     occasion: 'corporate',
     occasionLabel: 'Corporate',
     title: 'Branded Matte Luxury',
-    description: 'A smooth matte charcoal-and-gold corporate statement cake with an edible logo, brand colour palette, and a bold architectural silhouette.',
+    description:
+      'A smooth matte charcoal-and-gold corporate statement cake with an edible logo, brand colour palette, and a bold architectural silhouette.',
     alt: 'Matte charcoal corporate cake with edible logo and gold accent branding by Aanand Treats',
-    src: '/images/corporate.jpg',
   },
   {
     id: 'p7',
     occasion: 'wedding',
     occasionLabel: 'Wedding',
     title: 'Sage & Terracotta Foliage',
-    description: 'An asymmetric two-tier wedding cake finished with hand-pressed sage leaves, terracotta dried florals, and a natural linen ribbon wrap.',
+    description:
+      'An asymmetric two-tier wedding cake finished with hand-pressed sage leaves, terracotta dried florals, and a natural linen ribbon wrap.',
     alt: 'Asymmetric two-tier wedding cake with sage foliage, terracotta dried florals, and linen ribbon by Aanand Treats',
-    src: '/images/wedding-sage.jpg',
   },
   {
     id: 'p8',
     occasion: 'birthday',
     occasionLabel: 'Birthday',
     title: 'Midnight Galaxy Showstopper',
-    description: 'A dramatic navy-and-gold galaxy-textured cake with edible stardust, hand-sculpted planets, and a glitter shimmer finish for a milestone 50th birthday.',
+    description:
+      'A dramatic navy-and-gold galaxy-textured cake with edible stardust, hand-sculpted planets, and a glitter shimmer finish for a milestone 50th birthday.',
     alt: 'Midnight galaxy birthday cake with edible stardust, sculpted planets, and shimmer finish by Aanand Treats',
-    src: '/images/birthday-galaxy.jpg',
   },
   {
     id: 'p9',
     occasion: 'bento',
     occasionLabel: 'Bento Cake',
     title: 'Matcha & Rose Bento',
-    description: 'A delicate matcha-infused sponge wrapped in cream cheese frosting, adorned with edible rose petals and a single expressive brushstroke detail.',
+    description:
+      'A delicate matcha-infused sponge wrapped in cream cheese frosting, adorned with edible rose petals and a single expressive brushstroke detail.',
     alt: 'Matcha bento cake with cream cheese frosting, edible rose petals, and brushstroke detail by Aanand Treats',
-    src: '/images/bento-matcha.jpg',
   },
   {
     id: 'p10',
     occasion: 'anniversary',
     occasionLabel: 'Anniversary',
     title: 'Dusty Rose & Forever Script',
-    description: 'Soft dusty rose panel cake with a hand-drawn floral border in ivory royal icing and an italic "Forever" script topper for a 25th anniversary.',
+    description:
+      'Soft dusty rose panel cake with a hand-drawn floral border in ivory royal icing and an italic "Forever" script topper for a 25th anniversary.',
     alt: 'Dusty rose anniversary panel cake with ivory floral border and Forever script topper by Aanand Treats',
-    src: '/images/anniversary-rose.jpg',
   },
   {
     id: 'p11',
     occasion: 'baby-shower',
     occasionLabel: 'Baby Shower',
     title: 'Mint Cloud Tiered',
-    description: 'A dreamy mint-and-cream cloud-textured tiered cake with hand-sculpted fondant animals and a matching smash cake for the little one.',
-    alt: 'Mint cloud tiered baby shower cake with hand-sculpted cream animals and matching smash cake by Aanand Treats',
-    src: '/images/baby-mint.jpg',
+    description:
+      'A dreamy mint-and-white cloud-textured tiered cake with hand-sculpted fondant animals and a matching smash cake for the little one.',
+    alt: 'Mint cloud tiered baby shower cake with hand-sculpted fondant animals and matching smash cake by Aanand Treats',
   },
   {
     id: 'p12',
     occasion: 'birthday',
     occasionLabel: 'Birthday',
     title: 'Floral Graduation Tribute',
-    description: 'A single-tier graduation cake with hand-sculpted buttercream florals, a mortarboard accent, and an elegant script name dedication.',
+    description:
+      'A single-tier graduation cake with hand-sculpted buttercream florals, a mortarboard accent, and an elegant script name dedication.',
     alt: 'Floral graduation birthday cake with buttercream florals, mortarboard, and script dedication by Aanand Treats',
-    src: '/images/graduation.jpg',
-  },
-  {
-    id: 'p13',
-    occasion: 'birthday',
-    occasionLabel: 'Birthday',
-    title: 'Gold Indulgence',
-    description: 'Luxury white eggless birthday cake adorned with gold Ferrero Rocher chocolates, gold spheres, hand-piped white florals, and edible gold leaf.',
-    alt: 'Luxury white eggless birthday cake with gold Ferrero Rocher chocolates and gold spheres by Aanand Treats',
-    src: '/Screenshot_2026-06-08_221528.png',
-  },
-  {
-    id: 'p14',
-    occasion: 'birthday',
-    occasionLabel: 'Birthday',
-    title: 'Floral Script Celebration',
-    description: 'Fresh floral eggless birthday cake with pink script lettering, daisies, and pearl detailing — a heartfelt celebration centerpiece.',
-    alt: 'Fresh floral eggless birthday cake with pink script lettering, daisies, and pearl detailing by Aanand Treats',
-    src: '/Screenshot_2026-06-08_221539.png',
-  },
-  {
-    id: 'p15',
-    occasion: 'anniversary',
-    occasionLabel: 'Anniversary',
-    title: 'Rose Ribbon Romance',
-    description: 'Signature romantic eggless cake with a vibrant red rose, satin ribbon, and baby\'s breath — an intimate anniversary favourite.',
-    alt: 'Signature romantic eggless cake with a vibrant red rose, satin ribbon, and baby\'s breath by Aanand Treats',
-    src: '/Screenshot_2026-06-08_163102.png',
   },
 ]
 

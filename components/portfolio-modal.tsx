@@ -48,7 +48,7 @@ export function PortfolioModal({
       />
 
       {/* Panel */}
-      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-3xl glass-panel shadow-lg modal-animate">
+      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-3xl glass-panel shadow-deep modal-animate">
         {/* Close */}
         <button
           ref={closeRef}
@@ -63,7 +63,9 @@ export function PortfolioModal({
         {/* Image */}
         <div className="relative h-[280px] w-full bg-secondary sm:h-[340px]">
           <Image
-            src={item.src}
+            src={`/placeholder.svg?height=340&width=672&query=${encodeURIComponent(
+              item.alt,
+            )}`}
             alt={item.alt}
             fill
             className="object-cover"
@@ -92,7 +94,7 @@ export function PortfolioModal({
             href={portfolioWhatsapp(item.occasionLabel, item.title)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-amber-vivid px-7 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:brightness-110"
+            className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-amber-vivid px-7 py-3 text-sm font-semibold text-white shadow-amber transition-all duration-300 hover:scale-[1.03] hover:shadow-glow-amber hover:brightness-110"
             aria-label={`Inquire about the ${item.title} style via WhatsApp`}
           >
             <MessageCircle className="size-4" aria-hidden="true" />
