@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { MessageCircle, Home, RefreshCw } from 'lucide-react'
+import { MessageCircle, Hop as Home, RefreshCw } from 'lucide-react'
 import { whatsappLink } from '@/lib/studio'
 
 export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
