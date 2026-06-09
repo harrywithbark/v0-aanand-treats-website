@@ -60,7 +60,16 @@ export function IntakePanel() {
           </div>
 
           {/* Right: quick-spec grid */}
-          <div className="rounded-2xl border border-rose/30 backdrop-blur-lg bg-white/20 p-6 md:p-8 shadow-lg">
+          <div className="relative rounded-2xl border border-rose/30 backdrop-blur-lg bg-white/20 p-6 md:p-8 shadow-lg">
+            {/* Embellishment 5: watermark cake silhouette in form card corner */}
+            <div className="pointer-events-none absolute bottom-4 right-4 select-none opacity-[0.07]" aria-hidden="true">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M32 6c2 0 3.5-1.5 3.5-3.5S34 -1 32 -1s-3.5 1.5-3.5 3.5S30 6 32 6z" fill="#ff6b6b"/>
+                <rect x="10" y="12" width="44" height="8" rx="4" fill="#f59e0b"/>
+                <rect x="6" y="20" width="52" height="36" rx="8" fill="#ff6b6b"/>
+                <path d="M18 38h28M18 46h20" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </div>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
                 <label

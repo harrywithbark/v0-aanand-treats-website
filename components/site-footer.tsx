@@ -13,6 +13,17 @@ export function SiteFooter() {
       <div className="absolute right-1/3 bottom-0 size-32 rounded-full bg-emerald-vivid/5 blur-3xl" aria-hidden="true" />
 
       <div className="relative mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-8 lg:grid-cols-3 lg:gap-12 lg:py-20">
+
+        {/* Embellishment 6: top divider row with dots */}
+        <div className="col-span-full flex items-center gap-3 pointer-events-none select-none mb-2" aria-hidden="true">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-rose/30 to-transparent" />
+          <span className="size-1.5 rounded-full bg-rose/50" />
+          <span className="size-1 rounded-full bg-amber-vivid/50" />
+          <span className="size-1.5 rounded-full bg-emerald-vivid/40" />
+          <span className="size-1 rounded-full bg-amber-vivid/50" />
+          <span className="size-1.5 rounded-full bg-rose/50" />
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-amber-vivid/30 to-transparent" />
+        </div>
         {/* Column 1: location card */}
         <div className="rounded-2xl border border-white/15 backdrop-blur-lg bg-white/10 p-6 hover:border-rose/40 transition-colors duration-300">
           <div className="mb-3 flex items-center gap-2">
@@ -74,6 +85,16 @@ export function SiteFooter() {
             Consultations in English & Punjabi.
             <br />© 2026 Aanand Treats by Sadhna.
           </p>
+
+          {/* Embellishment 7: small floral-inspired monogram mark */}
+          <div className="mt-4 pointer-events-none select-none opacity-20" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="14" stroke="#f59e0b" strokeWidth="1"/>
+              <circle cx="20" cy="20" r="3" fill="#ff6b6b"/>
+              <path d="M20 6v4M20 30v4M6 20h4M30 20h4" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
+              <path d="M10.4 10.4l2.8 2.8M26.8 26.8l2.8 2.8M10.4 29.6l2.8-2.8M26.8 13.2l2.8-2.8" stroke="#10b981" strokeWidth="1" strokeLinecap="round"/>
+            </svg>
+          </div>
         </div>
       </div>
     </footer>

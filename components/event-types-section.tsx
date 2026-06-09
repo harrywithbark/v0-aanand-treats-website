@@ -28,6 +28,19 @@ export function EventTypesSection() {
           Every event is unique. Every cake is built around it — 100% eggless,
           entirely handcrafted, and completely your own.
         </p>
+
+        {/* Embellishment 4: small cake icon + flanking lines */}
+        <div className="mt-6 flex items-center justify-center gap-3 pointer-events-none select-none" aria-hidden="true">
+          <span className="h-px w-10 bg-gradient-to-r from-transparent to-rose/30 rounded-full" />
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="opacity-40">
+            <path d="M9 2c.6 0 1-.4 1-1S9.6 0 9 0 8 .4 8 1s.4 1 1 1z" fill="#ff6b6b"/>
+            <rect x="3" y="5" width="12" height="2" rx="1" fill="#f59e0b"/>
+            <rect x="2" y="7" width="14" height="9" rx="2" fill="#ff6b6b" fillOpacity=".25"/>
+            <rect x="2" y="7" width="14" height="9" rx="2" stroke="#ff6b6b" strokeWidth="1.2"/>
+            <path d="M6 12h6" stroke="#f59e0b" strokeWidth="1" strokeLinecap="round"/>
+          </svg>
+          <span className="h-px w-10 bg-gradient-to-l from-transparent to-amber-vivid/30 rounded-full" />
+        </div>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

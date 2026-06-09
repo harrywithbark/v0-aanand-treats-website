@@ -6,6 +6,21 @@ export function Hero() {
       id="story"
       className="relative grid items-center gap-10 px-5 pb-16 pt-32 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
     >
+      {/* Embellishment 1: scattered dot cluster — top-right of hero, behind image */}
+      <div className="pointer-events-none absolute right-0 top-28 hidden select-none opacity-25 lg:block" aria-hidden="true">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+          {[0,1,2,3,4,5,6,7,8].map((i) => (
+            <circle
+              key={i}
+              cx={15 + (i % 3) * 30}
+              cy={15 + Math.floor(i / 3) * 30}
+              r="3"
+              fill={i % 3 === 0 ? '#ff6b6b' : i % 3 === 1 ? '#f59e0b' : '#10b981'}
+            />
+          ))}
+        </svg>
+      </div>
+
       {/* Left: editorial statement */}
       <div className="reveal-none flex flex-col gap-6">
         <span className="inline-flex w-fit items-center gap-2 rounded-full border border-rose/20 bg-rose/5 px-4 py-1.5 text-[0.7rem] font-medium tracking-[0.16em] text-rose/90">
@@ -24,6 +39,20 @@ export function Hero() {
         <p className="max-w-xl text-pretty leading-relaxed text-espresso/75">
           From India to Canada, Sadhna&apos;s private atelier crafts bespoke masterpieces—elegant, deeply personal, and never too sweet. Every detail, by hand, for your celebration.
         </p>
+
+        {/* Embellishment 2: thin wave rule above CTAs */}
+        <div className="pointer-events-none select-none" aria-hidden="true">
+          <svg width="120" height="10" viewBox="0 0 120 10" fill="none" className="opacity-30">
+            <path d="M0 5 Q15 0 30 5 Q45 10 60 5 Q75 0 90 5 Q105 10 120 5" stroke="url(#waveGrad)" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+            <defs>
+              <linearGradient id="waveGrad" x1="0" y1="0" x2="120" y2="0">
+                <stop offset="0%" stopColor="#ff6b6b"/>
+                <stop offset="50%" stopColor="#f59e0b"/>
+                <stop offset="100%" stopColor="#10b981"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
 
         <div className="mt-2 flex flex-wrap items-center gap-4">
           <a

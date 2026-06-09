@@ -111,8 +111,15 @@ export function VisualAtelier() {
           A continuous showcase of recent commissions — from intimate Bento bakes
           to multi-tier showstoppers.
         </p>
-        {/* Decorative accent 6 */}
-        <div className="inline-block mt-6 w-12 h-1 bg-gradient-to-r from-rose via-amber-vivid to-emerald-vivid rounded-full opacity-50" aria-hidden="true" />
+        {/* Embellishment 3: small diamond row separator */}
+        <div className="flex items-center justify-center gap-2 mt-2 pointer-events-none select-none" aria-hidden="true">
+          <span className="inline-block size-1 rotate-45 rounded-sm bg-rose/40" />
+          <span className="inline-block size-1.5 rotate-45 rounded-sm bg-amber-vivid/50" />
+          <span className="inline-block size-1 rotate-45 rounded-sm bg-emerald-vivid/40" />
+          <span className="inline-block size-1.5 rotate-45 rounded-sm bg-rose/40" />
+          <span className="inline-block size-1 rotate-45 rounded-sm bg-amber-vivid/50" />
+        </div>
+
       </header>
 
       <div className="flex flex-col gap-5">
