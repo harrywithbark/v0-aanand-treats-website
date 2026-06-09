@@ -21,7 +21,7 @@ export function SiteFooter() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto grid max-w-[1440px] gap-8 px-5 py-16 md:grid-cols-2 md:gap-10 md:px-8 lg:grid-cols-3 lg:gap-14 lg:py-20">
+      <div className="relative mx-auto grid max-w-[1440px] gap-6 px-4 py-12 sm:px-5 sm:py-16 md:grid-cols-2 md:gap-10 md:px-8 lg:grid-cols-3 lg:gap-14 lg:py-20">
 
         {/* Divider row with dots */}
         <div
@@ -69,7 +69,7 @@ export function SiteFooter() {
               Sunday: Studio Closed
             </p>
           </div>
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-vivid/45 bg-amber-vivid/15 px-5 py-2.5 text-sm font-semibold tracking-tight text-amber-vivid shadow-glow-amber backdrop-blur-lg glow-pulse-soft">
+          <div className="inline-flex w-full items-center gap-2 rounded-full border border-amber-vivid/45 bg-amber-vivid/15 px-4 py-2.5 text-sm font-semibold tracking-tight text-amber-vivid shadow-glow-amber backdrop-blur-lg glow-pulse-soft sm:w-fit sm:px-5">
             <Sparkles className="size-4 shrink-0" aria-hidden="true" />
             Current Lead Time: 2&ndash;3 weeks
           </div>
@@ -90,13 +90,13 @@ export function SiteFooter() {
           </a>
           <a
             href={`mailto:${STUDIO.email}`}
-            className="group inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 bg-white/8 px-4 py-3 text-sm font-medium text-cream/90 backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-rose/20 hover:text-amber-vivid hover:shadow-glow-amber focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-vivid"
+            className="group inline-flex min-h-[48px] items-center gap-3 rounded-xl border border-white/15 bg-white/8 px-4 py-3 text-sm font-medium text-cream/90 backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-rose/50 hover:bg-rose/20 hover:text-amber-vivid hover:shadow-glow-amber focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-vivid overflow-hidden"
           >
             <Mail
               className="size-5 shrink-0 transition-transform duration-300 group-hover:scale-110"
               aria-hidden="true"
             />
-            {STUDIO.email}
+            <span className="truncate">{STUDIO.email}</span>
           </a>
           <p className="mt-1 text-sm leading-relaxed text-cream/55">
             Consultations in English &amp; Punjabi.
