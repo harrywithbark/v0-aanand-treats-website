@@ -34,10 +34,10 @@ export default function Page() {
       {/* Mobile sticky notification tray */}
       <a
         href="#intake"
-        className="fixed inset-x-0 bottom-0 z-40 flex min-h-[48px] items-center justify-center gap-2 bg-espresso px-4 py-3 text-center text-sm font-medium text-cream shadow-[0_-8px_24px_-12px_rgba(0,0,0,0.4)] md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 flex min-h-[52px] items-center justify-center gap-2 bg-espresso px-4 py-3 text-center text-xs font-medium text-cream shadow-[0_-8px_24px_-12px_rgba(0,0,0,0.4)] sm:text-sm md:hidden"
       >
         <span className="size-2 rounded-full bg-sage" aria-hidden="true" />
-        100% Eggless Custom Cakes • Build Your Cake Below
+        <span className="truncate">100% Eggless Custom Cakes • Build Your Cake</span>
       </a>
     </div>
   )

@@ -265,6 +265,17 @@
   }
   html {
     @apply font-sans;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+  }
+  /* Prevent iOS auto-zoom on inputs - minimum 16px font-size */
+  input, select, textarea, button {
+    font-size: 16px;
+  }
+  /* Ensure touch targets are accessible */
+  a, button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
   }
   ::selection {
     background-color: rgba(255, 107, 107, 0.2);
@@ -302,6 +313,12 @@
 @media (max-width: 1023px) {
   .marquee-ltr { animation-duration: 50s; }
   .marquee-rtl { animation-duration: 50s; }
+}
+
+/* Mobile marquee adjustments */
+@media (max-width: 639px) {
+  .marquee-ltr { animation-duration: 55s; }
+  .marquee-rtl { animation-duration: 55s; }
 }
 
 @media (prefers-reduced-motion: reduce) {

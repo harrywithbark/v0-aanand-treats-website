@@ -8,29 +8,29 @@ export function EventTypesSection() {
     <section
       id="event-types"
       aria-labelledby="event-types-heading"
-      className="relative px-5 py-16 md:px-8 lg:py-24"
+      className="relative px-5 py-12 sm:py-16 md:px-8 lg:py-24"
     >
       {/* Decorative accent 7 */}
       <div className="absolute -right-40 top-1/2 size-56 rounded-full bg-amber-vivid/8 blur-3xl pointer-events-none" aria-hidden="true" />
-      
-      <div className="mb-10 text-center lg:mb-14">
-        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
+
+      <div className="mb-8 text-center sm:mb-10 lg:mb-14">
+        <p className="mb-2 text-[0.65rem] font-medium tracking-[0.2em] text-rose/80 sm:mb-3 sm:text-xs">
           CRAFTED FOR EVERY OCCASION
         </p>
         <h2
           id="event-types-heading"
-          className="font-serif text-4xl leading-tight text-espresso text-balance md:text-5xl"
+          className="font-serif text-3xl leading-tight text-espresso text-balance sm:text-4xl md:text-5xl"
         >
           What Occasion Calls for a{' '}
           <span className="italic gradient-text-coral">Masterpiece?</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-pretty leading-relaxed text-espresso/75">
+        <p className="mx-auto mt-3 max-w-xl text-pretty leading-relaxed text-espresso/75 text-sm sm:mt-4 sm:text-base">
           Every event is unique. Every cake is built around it — 100% eggless,
           entirely handcrafted, and completely your own.
         </p>
 
         {/* Embellishment 4: small cake icon + flanking lines */}
-        <div className="mt-6 flex items-center justify-center gap-3 pointer-events-none select-none" aria-hidden="true">
+        <div className="mt-5 flex items-center justify-center gap-2.5 pointer-events-none select-none sm:mt-6 sm:gap-3" aria-hidden="true">
           <span className="h-px w-10 bg-gradient-to-r from-transparent to-rose/30 rounded-full" />
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="opacity-40">
             <path d="M9 2c.6 0 1-.4 1-1S9.6 0 9 0 8 .4 8 1s.4 1 1 1z" fill="#ff6b6b"/>
@@ -43,7 +43,7 @@ export function EventTypesSection() {
         </div>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {EVENT_TYPES.map((event, i) => (
           <ScrollReveal key={event.id} delay={i * 60}>
             <article
@@ -53,7 +53,7 @@ export function EventTypesSection() {
               <div className="absolute -right-4 -top-4 size-16 rounded-full bg-emerald-vivid/10 blur-xl pointer-events-none group-hover:bg-rose/10 transition-colors" aria-hidden="true" />
               
               {/* Placeholder image */}
-              <div className="relative h-[220px] w-full shrink-0 overflow-hidden bg-secondary">
+              <div className="relative h-[180px] w-full shrink-0 overflow-hidden bg-secondary sm:h-[200px] lg:h-[220px]">
                 <Image
                   src={`/placeholder.svg?height=220&width=400&query=${encodeURIComponent(
                     event.title + ' eggless custom cake',
@@ -70,11 +70,11 @@ export function EventTypesSection() {
               </div>
 
               {/* Content */}
-              <div className="flex flex-1 flex-col gap-3 p-6">
-                <p className="text-xs font-medium tracking-[0.15em] text-rose">
+              <div className="flex flex-1 flex-col gap-2.5 p-5 sm:gap-3 sm:p-6">
+                <p className="text-[0.65rem] font-medium tracking-[0.15em] text-rose sm:text-xs">
                   {event.tagline.toUpperCase()}
                 </p>
-                <h3 className="font-serif text-xl text-espresso">{event.title}</h3>
+                <h3 className="font-serif text-lg text-espresso sm:text-xl">{event.title}</h3>
                 <p className="flex-1 text-sm leading-relaxed text-espresso/70 text-pretty">
                   {event.copy}
                 </p>

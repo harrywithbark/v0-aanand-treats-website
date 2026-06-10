@@ -60,7 +60,7 @@ function MarqueeRow({
   return (
     <div className="marquee-row group overflow-hidden py-2" tabIndex={0}>
       <div
-        className={`marquee-track gap-5 ${
+        className={`marquee-track gap-3 sm:gap-4 md:gap-5 ${
           direction === 'ltr' ? 'marquee-ltr' : 'marquee-rtl'
         }`}
       >
@@ -69,9 +69,9 @@ function MarqueeRow({
             <figure
               key={`${direction}-${isClone ? 'clone' : 'orig'}-${i}`}
               aria-hidden={isClone || undefined}
-              className="group/card relative w-[220px] shrink-0 lg:w-[300px]"
+              className="group/card relative w-[160px] shrink-0 sm:w-[200px] md:w-[220px] lg:w-[300px]"
             >
-              <div className="relative h-[280px] w-[220px] overflow-hidden rounded-2xl border border-white/20 shadow-card transition-all duration-300 group-hover/card:scale-[1.03] group-hover/card:shadow-card-hover lg:h-[340px] lg:w-[300px]">
+              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl border border-white/20 shadow-card transition-all duration-300 group-hover/card:scale-[1.03] group-hover/card:shadow-card-hover sm:aspect-[4/3]">
                 <Image
                   src={`/placeholder.svg?height=340&width=300&query=${encodeURIComponent(
                     cake.label + ' eggless cake',
@@ -79,7 +79,7 @@ function MarqueeRow({
                   alt={isClone ? '' : cake.alt}
                   fill
                   loading="eager"
-                  sizes="300px"
+                  sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 220px, 300px"
                   className="object-cover"
                 />
                 <figcaption className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-espresso shadow-card backdrop-blur-sm">
@@ -100,14 +100,14 @@ export function VisualAtelier() {
       {/* Decorative accent 5 */}
       <div className="absolute -left-32 top-1/3 size-48 rounded-full bg-rose/10 blur-3xl pointer-events-none" aria-hidden="true" />
       
-      <header className="mb-10 px-5 text-center md:px-8">
-        <p className="mb-3 text-xs font-medium tracking-[0.2em] text-rose/80">
+      <header className="mb-8 px-5 text-center md:mb-10 md:px-8">
+        <p className="mb-2.5 text-[0.65rem] font-medium tracking-[0.2em] text-rose/80 sm:mb-3 sm:text-xs">
           THE PORTFOLIO
         </p>
-        <h2 className="font-serif text-4xl text-espresso md:text-5xl text-balance">
+        <h2 className="font-serif text-3xl text-espresso sm:text-4xl md:text-5xl text-balance">
           The Visual <span className="gradient-text-coral">Atelier</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-md text-pretty text-sm leading-relaxed text-espresso/75">
+        <p className="mx-auto mt-3 max-w-md text-pretty text-sm leading-relaxed text-espresso/75 sm:mt-4">
           A continuous showcase of recent commissions — from intimate Bento bakes
           to multi-tier showstoppers.
         </p>
@@ -127,15 +127,16 @@ export function VisualAtelier() {
         <MarqueeRow items={ROW_TWO} direction="rtl" />
       </div>
 
-      <div className="mt-12 flex justify-center px-5">
+      <div className="mt-10 flex justify-center px-5 md:mt-12">
         <a
           href={STUDIO.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-[48px] items-center gap-3 rounded-full glass border border-white/40 px-6 py-3 text-sm font-medium text-espresso shadow-card transition-all duration-300 hover:scale-[1.03] hover:shadow-card-hover hover:-translate-y-0.5 hover:border-rose/30"
+          className="inline-flex min-h-[48px] items-center gap-2 rounded-full glass border border-white/40 px-5 py-3 text-sm font-medium text-espresso shadow-card transition-all duration-300 hover:scale-[1.03] hover:shadow-card-hover hover:-translate-y-0.5 hover:border-rose/30 sm:gap-3 sm:px-6"
         >
-          <Camera className="size-5 text-rose" aria-hidden="true" />
-          Follow {STUDIO.instagramHandle} for Daily Studio Captures
+          <Camera className="size-4 text-rose sm:size-5" aria-hidden="true" />
+          <span className="hidden sm:inline">Follow {STUDIO.instagramHandle} for Daily Studio Captures</span>
+          <span className="sm:hidden">Follow on Instagram</span>
         </a>
       </div>
     </section>

@@ -23,7 +23,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 border-b border-rose/20 bg-gradient-to-r from-rose/10 via-amber-vivid/5 to-cream px-5 py-3 backdrop-blur-xl md:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 border-b border-rose/20 bg-gradient-to-r from-rose/10 via-amber-vivid/5 to-cream px-4 py-2.5 backdrop-blur-xl sm:gap-6 sm:px-5 sm:py-3 md:px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]">
         {/* Left: status token */}
         <span className="hidden shrink-0 text-[0.65rem] font-medium tracking-[0.18em] text-espresso/80 lg:block">
           <span className="inline-block size-1.5 rounded-full bg-sage mr-1.5" aria-hidden="true" />
@@ -33,7 +33,7 @@ export function SiteHeader() {
         {/* Center: brand */}
         <a
           href="#top"
-          className="font-serif text-xl tracking-wide text-espresso transition-transform duration-300 hover:scale-[1.02] sm:text-2xl lg:text-center lg:whitespace-nowrap"
+          className="font-serif text-lg tracking-wide text-espresso transition-transform duration-300 hover:scale-[1.02] sm:text-xl lg:text-center lg:whitespace-nowrap lg:text-2xl"
         >
           Aanand Treats <span className="italic text-rose">by Sadhna</span>
         </a>
@@ -66,7 +66,7 @@ export function SiteHeader() {
           aria-label="Open navigation menu"
           aria-expanded={open}
           onClick={() => setOpen(true)}
-          className="flex size-12 items-center justify-center rounded-full text-espresso transition-all duration-300 hover:bg-rose/10 hover:text-rose lg:hidden"
+          className="flex size-11 items-center justify-center rounded-full text-espresso transition-all duration-300 hover:bg-rose/10 hover:text-rose lg:hidden"
         >
           <Menu className="size-6" aria-hidden="true" />
         </button>
@@ -86,30 +86,30 @@ export function SiteHeader() {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
-        className="fixed right-0 top-0 z-50 flex h-dvh w-[min(82vw,340px)] flex-col glass-panel px-7 py-6 transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden"
+        className="fixed right-0 top-0 z-50 flex h-dvh w-[min(85vw,340px)] flex-col glass-panel px-6 py-5 transition-transform duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-7 sm:py-6 lg:hidden"
         style={{ transform: open ? 'translateX(0)' : 'translateX(100%)' }}
       >
         <div className="flex items-center justify-between">
-          <span className="text-[0.65rem] font-medium tracking-[0.18em] text-espresso/60">
+          <span className="text-[0.6rem] font-medium tracking-[0.18em] text-espresso/60 sm:text-[0.65rem]">
             100% EGGLESS • SURREY, BC
           </span>
           <button
             type="button"
             aria-label="Close navigation menu"
             onClick={() => setOpen(false)}
-            className="flex size-12 items-center justify-center rounded-full text-espresso transition-all duration-300 hover:bg-rose/10 hover:text-rose"
+            className="flex size-11 items-center justify-center rounded-full text-espresso transition-all duration-300 hover:bg-rose/10 hover:text-rose"
           >
             <X className="size-6" aria-hidden="true" />
           </button>
         </div>
 
-        <nav className="mt-10 flex flex-col gap-2">
+        <nav className="mt-8 flex flex-col gap-1 sm:mt-10 sm:gap-2">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="flex min-h-[48px] items-center border-b border-espresso/10 font-serif text-xl text-espresso transition-colors hover:text-rose"
+              className="flex min-h-[48px] items-center border-b border-espresso/10 font-serif text-lg text-espresso transition-colors hover:text-rose sm:text-xl"
             >
               {item.label}
             </a>

@@ -22,7 +22,7 @@ export function GalleryClient() {
       {/* Filter pills */}
       <nav
         aria-label="Filter portfolio by occasion"
-        className="flex flex-wrap justify-center gap-2 py-8"
+        className="flex flex-wrap justify-center gap-2 py-6 sm:py-8"
       >
         {GALLERY_FILTERS.map((f) => {
           const isActive = activeFilter === f.id
@@ -32,7 +32,7 @@ export function GalleryClient() {
               type="button"
               aria-pressed={isActive}
               onClick={() => setActiveFilter(f.id)}
-              className={`min-h-[44px] rounded-full border px-5 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/60 ${
+              className={`min-h-[44px] rounded-full border px-4 py-2 text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose/60 sm:px-5 sm:text-sm ${
                 isActive
                   ? 'border-rose bg-rose text-white shadow-glow'
                   : 'border-white/20 glass text-espresso/70 hover:border-rose/60 hover:text-rose hover:shadow-glow'
@@ -67,7 +67,7 @@ export function GalleryClient() {
               aria-label={`View details for ${item.title} — ${item.occasionLabel}`}
             >
               {/* Image */}
-              <div className="relative h-[280px] w-full overflow-hidden bg-secondary">
+              <div className="relative h-[220px] w-full overflow-hidden bg-secondary sm:h-[260px] lg:h-[280px]">
                 <Image
                   src={`/placeholder.svg?height=280&width=400&query=${encodeURIComponent(
                     item.alt,
