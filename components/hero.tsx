@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="story"
-      className="relative grid items-center gap-10 px-5 pb-16 pt-32 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
+      className="relative grid items-center gap-12 overflow-x-clip px-5 pb-16 pt-28 sm:gap-10 sm:pt-32 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
     >
       {/* Embellishment 1: scattered dot cluster — top-right, behind image */}
       <div
@@ -31,7 +31,7 @@ export function Hero() {
       {/* Left: editorial statement */}
       <div className="flex flex-col gap-6">
         <ScrollReveal delay={0}>
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-rose/25 bg-rose/8 px-4 py-1.5 text-[0.7rem] font-medium tracking-[0.16em] text-rose/90 transition-colors duration-300 hover:border-rose/40 hover:bg-rose/12">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-rose/25 bg-rose/8 px-3.5 py-1.5 text-[0.62rem] font-medium tracking-[0.12em] text-rose/90 transition-colors duration-300 hover:border-rose/40 hover:bg-rose/12 sm:px-4 sm:text-[0.7rem] sm:tracking-[0.16em]">
             <span className="size-1.5 rounded-full bg-sage animate-pulse" aria-hidden="true" />
             BOUTIQUE CAKE STUDIO &bull; EST. SURREY, BC
           </span>
@@ -40,7 +40,7 @@ export function Hero() {
         <ScrollReveal delay={120}>
           <h1
             className="font-serif font-semibold leading-[1.04] text-espresso text-balance"
-            style={{ fontSize: 'clamp(2.6rem, 5vw, 4.1rem)' }}
+            style={{ fontSize: 'clamp(2rem, 8vw, 4.1rem)' }}
           >
             <span className="gradient-text-coral">Custom Cakes</span>.
             <br className="hidden sm:block" />
@@ -88,7 +88,7 @@ export function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={360}>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href="#intake"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-rose px-7 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:scale-[1.04] hover:shadow-glow-lg hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose active:scale-[0.97]"
@@ -109,8 +109,8 @@ export function Hero() {
         </ScrollReveal>
 
         {/* Decorative accents */}
-        <div className="absolute -left-8 top-1/4 size-2 rounded-full bg-rose/30" aria-hidden="true" />
-        <div className="absolute -left-4 bottom-1/3 size-1.5 rounded-full bg-amber-vivid/40" aria-hidden="true" />
+        <div className="absolute -left-8 top-1/4 hidden size-2 rounded-full bg-rose/30 lg:block" aria-hidden="true" />
+        <div className="absolute -left-4 bottom-1/3 hidden size-1.5 rounded-full bg-amber-vivid/40 lg:block" aria-hidden="true" />
       </div>
 
       {/* Right: editorial frame */}
