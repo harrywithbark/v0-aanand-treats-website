@@ -30,7 +30,7 @@ export function Hero() {
     <section
       id="story"
       role="banner"
-      className="relative grid items-center gap-8 px-4 pb-12 pt-24 md:px-6 md:pb-16 md:pt-32 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14 lg:pt-40"
+      className="relative mx-auto max-w-screen-lg grid items-center gap-8 px-4 pb-12 pt-24 md:px-6 md:pb-16 md:pt-32 lg:px-0 lg:grid-cols-2 lg:gap-14 lg:pt-40"
     >
       <div className="pointer-events-none absolute right-0 top-28 hidden select-none opacity-25 lg:block" aria-hidden="true">
         <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
@@ -67,8 +67,8 @@ export function Hero() {
           <a href="#atelier" className="inline<think> min-h-[48px] items-center justify-center rounded-full glass border border-cream/40 px-7 py-3 text-sm font-medium text-espresso shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:-translate-y-0.5">View the Atelier</a>
         </div>
 
-        <div className="absolute -left-8 top-1/4 size-2 rounded-full bg-rose/30" aria-hidden="true" />
-        <div className="absolute -left-4 bottom-1/3 size-1.5 rounded-full bg-amber-vivid/40" aria-hidden="true" />
+        <div className="hidden sm:block absolute -left-8 top-1/4 size-2 rounded-full bg-rose/30" aria-hidden="true" />
+        <div className="hidden sm:block absolute -left-4 bottom-1/3 size-1.5 rounded-full bg-amber-vivid/40" aria-hidden="true" />
       </div>
 
       <div className="relative">
@@ -78,7 +78,7 @@ export function Hero() {
             alt="Signature romantic eggless cake with a vibrant red rose, satin ribbon, and baby's breath by Aanand Treats by Sadhna"
             fill
             priority
-            sizes="(max-width: 1024px) 90vw, 45vw"
+            sizes="(max-width: 640px) 100vw, 45vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-espresso/20 via-transparent to-transparent" />
